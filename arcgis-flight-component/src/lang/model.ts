@@ -1,1 +1,0 @@
-export type Translations = typeof import('./translations.json');
