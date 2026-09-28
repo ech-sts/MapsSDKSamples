@@ -39,14 +39,7 @@ export default defineConfig({
 	base: './',
 	plugins: [
 		basicSsl(),
-		viteStaticCopy({
-			targets: [
-				{
-					src: './config/config.json',
-					dest: '.',
-				},
-			],
-		}),
+		
 		{
 			name: 'build-logger',
 			closeBundle() {
@@ -55,7 +48,6 @@ export default defineConfig({
 				)
 			},
 		},
-		// basicSsl(),
 		react({
 			// Use React plugin in all *.jsx and *.tsx files
 			include: '**/*.{jsx,tsx}',
